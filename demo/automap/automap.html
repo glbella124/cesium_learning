@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../Cesium/Cesium/Widgets/widgets.css" rel="stylesheet" />
+    <title>automap</title>
+    <style>
+      .remove-automap {
+        width: 100px;
+        height: 30px;
+        background: orange;
+        border: 1px solid black;
+        border-radius: 4px;
+        position: absolute;
+        left: 30px;
+        top: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .remove-basemap {
+        width: 100px;
+        height: 30px;
+        background: plum;
+        border: 1px solid black;
+        border-radius: 4px;
+        position: absolute;
+        left: 30px;
+        top: 80px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cesiumContainer"></div>
+    <button type="button" onclick="removeAutocad()" class="remove-automap">移除autocad图</button>
+    <button type="button" onclick="removeBasemap()" class="remove-basemap">移除底图</button>
+    <script src="../Cesium/Cesium/Cesium.js" type="text/javascript"></script>
+    <script src="./automap.js"></script>
+  </body>
+</html>
