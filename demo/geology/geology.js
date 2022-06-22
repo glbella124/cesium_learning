@@ -33,12 +33,14 @@ function createModel(url, height) {
       uri: url,
       minimumPixelSize: 128,
       maximumScale: 20000,
+      color:Cesium.Color.WHITE
     },
   });
   viewer.trackedEntity = entity;
 }
 
-createModel("./SampleData/models/geology/newlayer2.gltf", 5000.0)
+// createModel("./SampleData/models/geology/newlayer2.gltf", 5000.0)
+createModel("./SampleData/models/geology/water_0.glb")
 
 // const options = [
 //   {
