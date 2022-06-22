@@ -17,19 +17,18 @@ function init() {
   if (viewer) {
     return;
   }
-  Cesium.Ion.defaultAccessToken =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI4NDY0ZDJmNi1lNDQ0LTRlYTMtYjkyMy1iYmM0ODczOTcwYzIiLCJpZCI6MzI3MjQsInNjb3BlcyI6WyJhc3IiLCJnYyJdLCJpYXQiOjE1OTczOTA5MTd9.mVPY1HXH9oFLZGnn2HiSz-1oAgEy7LfaqK9kc-9-oig";
-
-  viewer = new Cesium.Viewer("cesiumContainer", {
-    animation: false,
-    timeline: false,
-    creditContainer: "creditContainer",
-    // terrainProvider: new Cesium.ArcGISTiledElevationTerrainProvider({
-    //     url:
-    //         "https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer",
-    //     requestWaterMask: true,
-    // }),
-  });
+  (Cesium.Ion.defaultAccessToken =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0NTQ1MDVlZC0xODQwLTRmZWEtOWEyNi1mMjMwZjY0NzEwZTkiLCJpZCI6Nzc4OTksImlhdCI6MTY0MDY4MzMxM30.qYUdRWOCyJqjJCJJAt69xiSTs0go_AYBMMi_eznR_Ag"),
+    (viewer = new Cesium.Viewer("cesiumContainer", {
+      animation: false,
+      timeline: false,
+      creditContainer: "creditContainer",
+      // terrainProvider: new Cesium.ArcGISTiledElevationTerrainProvider({
+      //     url:
+      //         "https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer",
+      //     requestWaterMask: true,
+      // }),
+    }));
   if (navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)) {
     //移动设备上禁掉以下几个选项，可以相对更加流畅
     viewer.scene.fog.enable = false;
